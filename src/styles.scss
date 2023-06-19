@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'app/theme.scss';
+
+*{
+  font-family: $opensans;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background-color: $blue;
+}
+
+a{
+  color:white;
+  text-decoration: none;
+}
+
+.orange-button{
+  background-color: $orange;
+  border:none;
+  border-radius: 8px;
+  padding: 5px 15px;
+  color:white;
+  font-size: 15px;
+}
+
+.white-button{
+  background-color: $yellow;
+  border:none;
+  border-radius: 8px;
+  padding: 7px 45px;
+  max-width: 200px;
+  color:rgb(58, 58, 58);
+  font-weight: 500;
+  font-size: 16px;
+  margin:0 auto;
+}
+
+button{
+  cursor:pointer;
+}

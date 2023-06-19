@@ -1,0 +1,15 @@
+<div id="converter-component">
+  <div id="converter-container">
+    <h1 id="title">Convertir imagen a PDF</h1>
+    <form [formGroup]="fileForm" id="file-form">
+      <div class="input-container">
+        <input (change)='selectFile($event)' type="file" formControlName="file" accept="image/*">
+        <div *ngIf="loaderConverter" id="loading-bar"><span></span></div>
+        <div *ngIf="downloadButton" id="message-bar"><p>Listo!</p></div>
+      </div>
+      <button *ngIf="converterButton" (click)="submitFile()" type="submit" id="converter-button" class="white-button">Convertir</button>
+      <button *ngIf="downloadButton" (click)="downloadFile()" type="button" id="download-button" class="white-button">Descargar</button>
+    </form>
+    <img id="image" src="../assets/images/meteorito.png">
+  </div>
+</div>
